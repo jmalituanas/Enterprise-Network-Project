@@ -2,8 +2,8 @@
 I built a fully functional corporate network from scratch inside VMware to simulate a 10-employee business. The project demonstrates how to set up network isolation, central identity management, secure network storage, endpoint management, and centralized security monitoring (SIEM).
  
 ## Network Diagram
-![Network Topology](.ENP_Network-Diagram.png)
-*Figure 1: The finalized network layout of this lab showing the two subnets and traffic flow.*
+![Network Topology](./ENP_Network-Diagram.png)
+*Figure 1: The finalized network layout of the lab showing the two subnets and traffic flow.*
  
 ---
  
