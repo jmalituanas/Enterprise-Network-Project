@@ -48,6 +48,15 @@ I built a fully functional corporate network from scratch inside VMware to simul
  
 ---
 
+## List of the Lab's Management Access
+* **OPNsense Web GUI:** `https://192.168.10.254`
+* **TrueNAS Storage Portal:** `http://192.168.10.80`
+* **Wazuh Security Dashboard:** `https://192.168.10.90:443`
+* **Grafana Monitoring:** `http://192.168.10.90:3000`
+* **Snipe-IT Asset Manager:** `http://192.168.10.95`
+
+---
+
 ## Major Problems Encountered
  
 * **VMware NAT Interface Lease Drop**
