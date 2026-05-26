@@ -2,7 +2,7 @@
 I built a fully functional corporate network from scratch inside VMware to simulate a 10-employee business. The project demonstrates how to set up network isolation, central identity management, secure network storage, endpoint management, and centralized security monitoring (SIEM).
  
 ## Network Diagram
-![Network Topology](./ENP_Network-Diagram.png)
+![Network Topology](./images/ENP_Network-Diagram.png)
 *Figure 1: The finalized network layout of the lab showing the two subnets and traffic flow.*
  
 ---
@@ -82,3 +82,49 @@ I built a fully functional corporate network from scratch inside VMware to simul
 * **TrueNAS Directory Access Permission Blocks**
   * *Problem:* End-users experienced access denials on mapped network storage directories following data migration due to broken folder permissions.
   * *Fix:* Standardized syntax directory naming conventions and re-architected the target storage layout on TrueNAS using nested **Childsets** to force clean file permission inheritance down the folder tree.
+
+---
+
+## Live Infrastructure & Environment Showcase
+
+### 1. Identity Management & Core Gateway Network
+The foundation of the environment uses Windows Server 2022 to control directory services alongside an OPNsense firewall routing isolated subnets.
+
+| Active Directory OUs & Group Policy Objects | OPNsense Next-Gen Firewall Dashboard |
+|---|---|
+| ![Active Directory Management](./images/winserver-ADUC-GPO.png) | ![OPNsense Gateway](./images/opnsense-dashboard.png) |
+
+---
+
+### 2. Enterprise Storage & Central Asset Tracking
+Departmental shared folders are structured natively inside TrueNAS datasets using clean inheritance rules, while every virtual instance is tracked inside the Snipe-IT asset database.
+
+| TrueNAS Core SMB Share Directory Pool | Snipe-IT IT Asset Database Inventory |
+|---|---|
+| ![TrueNAS Datasets](./images/truenas-storage.png) | ![Snipe-IT Asset Deployment](./images/snipeit-assets.png) |
+
+---
+
+###  3. Security Operations, Endpoint Patching & Metrics SIEM
+Systems compliance is maintained via automated cloud endpoints, while the overall security fabric aggregates active threat signatures and hypervisor container performance data.
+
+| Action1 Automated Endpoint Fleet Management | Wazuh SIEM Security Operations Center |
+|---|---|
+| ![Action1 Managed Workstations](./images/action1-assets.png) | ![Wazuh SIEM Security Monitoring](./images/wazuh-dashboard.png) |
+
+| Grafana Infrastructure & Performance Analytics |
+|---|
+| ![Grafana Workspace Metrics](./images/grafana-dashboard.png) |
+
+---
+
+### 4. End-User Experience (User POV)
+From an employee workstation, corporate configurations map seamlessly without manual intervention.
+
+| Employee's Desktop View |
+|---|
+| ![Desktop Experience](./images/grafana-dashboard.png) |
+
+* **Automated Share Drives:** The network instantly maps the departmental dataset (Z:) and public folders based on Active Directory group memberships.
+* **Enforced Corporate Security:** Group Policies silently run in the background—blocking unauthorized USB storage devices, enforcing desktop backgrounds, and restricting access to the command prompt.
+* **Silent Endpoint Management:** System updates, software deployments, and security monitoring happen entirely in the background without interrupting daily workflows.
