@@ -123,7 +123,7 @@ From an employee workstation, corporate configurations map seamlessly without ma
 
 | Employee's Desktop View |
 |---|
-| ![Desktop Experience](./images/grafana-dashboard.png) |
+| ![Desktop Experience](./images/hr-userpov.png) |
 
 * **Automated Share Drives:** The network instantly maps the departmental dataset (Z:) and public folders based on Active Directory group memberships.
 * **Enforced Corporate Security:** Group Policies silently run in the background—blocking unauthorized USB storage devices, enforcing desktop backgrounds, and restricting access to the command prompt.
